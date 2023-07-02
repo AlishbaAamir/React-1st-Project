@@ -28,9 +28,11 @@ const [user,setUser]=useState(true)
     {user?
     (<Routes>
        <Route path="/" element={<Home/>} />
-       <Route path="/products" element={< Products/>} />
+       {/* <Route path="/products" element={< Products/>} /> */}
        <Route path="/products/:productId" element={< ProductPage/>} />
        <Route path="/products/category/:categoryName" element={< CategoryPage/>} /> 
+       <Route path="/about" element={<About/>} />
+       {/* <Route path="/login" element={<Login/>} /> */}
        <Route path="*" element={<Page404/>} />
     </Routes>)
     :

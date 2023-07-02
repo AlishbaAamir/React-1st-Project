@@ -4,7 +4,7 @@ import Carousel from 'react-bootstrap/Carousel';
 function Header() {
   return (
     <>
-    <div className='py-1'>
+    <div className='py-1 width-100%'>
     <Carousel slide={false}>
     <Carousel.Item>
       <img className="d-block w-100 "
