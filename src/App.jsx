@@ -32,7 +32,7 @@ const [user,setUser]=useState(true)
        <Route path="/products/:productId" element={< ProductPage/>} />
        <Route path="/products/category/:categoryName" element={< CategoryPage/>} /> 
        <Route path="/about" element={<About/>} />
-       {/* <Route path="/login" element={<Login/>} /> */}
+       <Route path="/login" element={<Login/>} /> 
        <Route path="*" element={<Page404/>} />
     </Routes>)
     :
@@ -42,16 +42,7 @@ const [user,setUser]=useState(true)
       <Route path="*" element={<Navigate to="/login" replace={true}/>} />
     </Routes>)
     }
-      {/* <Routes>
-      <Route path="/" element={<Home/>} />
-      <Route path="/login" element={< Login/>} />
-      <Route path="/about" element={< About/>}/>
-      <Route path="/contactUs" element={< ContactUs/>}/> 
-      <Route path="/products/:productID" element={< ProductPage/>}/>
-      <Route path="/products/category/:CategoryName" element={< CategoryPage/>}/>
-      <Route path="/products" element={< Products/>} />
-      <Route path="*" element={<Page404/>} />
-     </Routes>   */}
+     
       <Footer/> 
     </>
   )

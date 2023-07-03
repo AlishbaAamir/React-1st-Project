@@ -75,7 +75,7 @@ useEffect(() => {
           count={5}
           size={24}
           edit={false}
-          value={data.rating}
+          value={data.rate}
           color2={'#ffd700'}/>
         </div>
         <div><button className='btn btn-dark mx-3 py-2 my-2' disabled={productQuantity >1? false:true} onClick={()=>SetproductQuantitry(productQuantity-1)}>-</button>
