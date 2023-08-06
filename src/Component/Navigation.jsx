@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import Cart from './Cart';
 
 import { Link } from 'react-router-dom';
 
@@ -35,9 +36,8 @@ function Navigation() {
             <Button variant="outline-success">Search</Button>
           </Form>
           <div className='py-2'>
-          {/* <Button className='mx-2' variant="outline-secondary"><Link to="/login" className='mx-2 my-2 text-decoration-none text-dark' >Login</Link></Button> */}
-          <Button className='mx-2' variant="outline-secondary"><Link to="*" className='mx-2 my-2 text-decoration-none text-dark' >Register</Link></Button>
-          <Button className='mx-2' variant="outline-secondary"><Link to="/login" className='mx-2 my-2 text-decoration-none text-dark' ><i className='fa-solid fa-cart-shopping'></i></Link></Button>
+           <Button className='mx-2' variant="outline-secondary"><Link to="*" className='mx-2 my-2 text-decoration-none text-dark' >Register</Link></Button>
+            <Cart/>
         </div>
         </Navbar.Collapse>
       </Container>

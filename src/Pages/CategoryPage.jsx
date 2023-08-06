@@ -33,14 +33,17 @@ axios.get(`https://fakestoreapi.com/products/category/${categoryName}`).then(jso
         data.map((val,key)=>
         <div className='col-md-4 my-3 ' key={key}>
        <Link className='text-decoration-none' to={`/products/${val.id}`}>
-        <Card style={{height:'500px'}} >
-      <Card.Img variant="top" src={val.image} style={{height:'300px'}} />
+        <Card style={{height:'400px'}} >
+      <Card.Img variant="top" src={val.image} style={{height:'200px'}} />
       <Card.Body>
-        <Card.Title>{val.title}-{val.price}$</Card.Title>
+        <Card.Title>{val.title.length > 20 ? val.title.slice(0,20)+'...' : val.title}</Card.Title>
         <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
+        {val.description.length > 60 ? val.description.slice(0,60)+'...' : val.description} 
         </Card.Text>
+        <span className='badge bg-secondary my-2 '>{val.price}$</span>
+         <div className='d-grid'> <button className='btn btn-outline-dark' type='button' onClick={()=>addtoCart(val)}>
+          Add To Cart</button>
+          </div>
         
       </Card.Body>
     </Card>

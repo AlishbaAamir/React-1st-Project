@@ -3,7 +3,6 @@ import {Route, Routes,Navigate} from 'react-router-dom'
 import Home from './Pages/Home'
 import Login from './Pages/Login'
 import About from './Pages/About'
-import ContactUs from './Pages/ContactUs'
 import Products from './Pages/Products'
 import Page404 from './Pages/Page404'
 import ProductPage from './Pages/ProductPage'
@@ -13,7 +12,7 @@ import Navigation from './Component/Navigation'
 import { useState } from 'react'
 
 
-// import SideBar from './Component/SideBar'
+
 
 function App() {
 const [user,setUser]=useState(true)
@@ -28,7 +27,7 @@ const [user,setUser]=useState(true)
     {user?
     (<Routes>
        <Route path="/" element={<Home/>} />
-       {/* <Route path="/products" element={< Products/>} /> */}
+       {/* <Route path="/cart" element={< Cart/>} /> */}
        <Route path="/products/:productId" element={< ProductPage/>} />
        <Route path="/products/category/:categoryName" element={< CategoryPage/>} /> 
        <Route path="/about" element={<About/>} />
