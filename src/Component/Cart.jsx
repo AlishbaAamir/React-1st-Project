@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { CartContext } from '../Context/addtoCart/Context';
-import Cartitems from './Cartitems';
+import CartItems from './CartItems';
 
 
 function Cart() {
@@ -34,7 +34,7 @@ function Cart() {
       Some text as placeholder. In real life you can have the elements you
       have chosen. Like, text, images, lists, etc.
       {
-            state.cart.map((val, key) =><Cartitems key={key} data={val}/> )
+            state.cart.map((val, key) =><CartItems key={key} data={val}/> )
           }
                      </Offcanvas.Body>
            </Offcanvas>

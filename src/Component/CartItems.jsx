@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 
 
-function Cartitems({data}) {
+function CartItems({data}) {
 
     const [productQuantity,SetproductQuantitry]=useState(1)
     
@@ -38,4 +38,4 @@ function Cartitems({data}) {
   )
 }
 
-export default Cartitems
+export default CartItems
