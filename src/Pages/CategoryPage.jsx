@@ -5,18 +5,21 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-
+import { CartContext } from '../Context/addtoCart/Context';
 
 
 function CategoryPage() {
   const {categoryName}=useParams()
   const [data,setData]=useState([])
+ 
   useEffect(() => {
     AOS.init();
   }, [])
 useEffect(()=>{
 axios.get(`https://fakestoreapi.com/products/category/${categoryName}`).then(json=>setData(json.data))
 },[categoryName])
+
+
 
 
   return (
