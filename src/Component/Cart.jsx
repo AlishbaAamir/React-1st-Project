@@ -25,13 +25,19 @@ function Cart() {
   <Offcanvas show={show} onHide={()=>setShow(false)} placement='end' name='end'>
     <Offcanvas.Header closeButton>
       <Offcanvas.Title>Cart</Offcanvas.Title>
+     
     </Offcanvas.Header>
+    <button className="btn btn-outline-dark" onClick={() => dispatch({
+            type : "CLEAR_CART"
+           })}>  Clear Cart</button>
     <Offcanvas.Body>
       Some text as placeholder. In real life you can have the elements you
       have chosen. Like, text, images, lists, etc.
-      <Cartitems/>
-    </Offcanvas.Body>
-  </Offcanvas>
+      {
+            state.cart.map((val, key) =><Cartitems key={key} data={val}/> )
+          }
+                     </Offcanvas.Body>
+           </Offcanvas>
   </>
   )
 }

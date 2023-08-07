@@ -22,7 +22,6 @@ function Navigation() {
             navbarScroll
           >
             <Link to="/" className='mx-2 my-2 text-decoration-none text-dark' >Home</Link>
-            <Link to="/products" className='mx-2 my-2 text-decoration-none text-dark'>Product</Link>
             <Link to="/about"  className='mx-2 my-2 text-decoration-none text-dark'>About</Link>
              <Link to="/login" className='mx-2 my-2 text-decoration-none text-dark'>Login </Link>
           </Nav>
