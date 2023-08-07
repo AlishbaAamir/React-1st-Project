@@ -3,7 +3,7 @@ import { reducer } from './reducer'
  
 const getCartData = () =>{
   let cartData = localStorage.getItem('cart')
-  if(cartData===[]){
+  if(cartData==[]){
     return []
   }
   else{
